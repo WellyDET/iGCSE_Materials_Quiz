@@ -1,0 +1,401 @@
+[
+  {
+    "question_id": 1,
+    "kind": "mcq",
+    "image": "images/grp_glass_reinforced_plastic_3.png",
+    "question": "What material is shown?",
+    "correct_answers": [
+      "GRP (glass reinforced plastic)"
+    ],
+    "why": "Composites • Incredible strength (not lightweight though) Can be moulded into a range of complex 3D shapes and forms"
+  },
+  {
+    "question_id": 2,
+    "kind": "multi",
+    "image": "images/copper_1.png",
+    "question": "Which statements apply to this material? (Select ALL that apply)",
+    "correct_answers": [
+      "good for wiring, plumbing, circuit board conductors",
+      "Great conductor of heat and electricity. Very ductile/malleable for bendy application)"
+    ],
+    "why": "Answer: Copper (Metals / Alloys)"
+  },
+  {
+    "question_id": 3,
+    "kind": "mcq",
+    "image": "images/urea_formaldehyde_1.png",
+    "question": "What material is shown?",
+    "correct_answers": [
+      "Urea Formaldehyde"
+    ],
+    "why": "Polymers - Thermosetting • Very heat and electricity resistant - Handles extreme temeperatures"
+  },
+  {
+    "question_id": 4,
+    "kind": "mcq",
+    "image": "images/teak_1.png",
+    "question": "What material is shown?",
+    "correct_answers": [
+      "Teak"
+    ],
+    "why": "Natural Timbers • Natural oils protect from insect and fungal attack outdoors. Strong, dense, hard."
+  },
+  {
+    "question_id": 5,
+    "kind": "multi",
+    "image": "images/melamime_formaldehyde_1.png",
+    "question": "Which statements apply to this material? (Select ALL that apply)",
+    "correct_answers": [
+      "Thermosetting, so not recyclable.",
+      "Kitchen work tops"
+    ],
+    "why": "Answer: Melamime Formaldehyde (Polymers - Thermosetting)"
+  },
+  {
+    "question_id": 6,
+    "kind": "multi",
+    "image": "images/pmma_acrylic_perspex_2.png",
+    "question": "Which statements apply to this material? (Select ALL that apply)",
+    "correct_answers": [
+      "Brilliant optical properties (nearly 100% transparent). Rigid and hard. Easly formed with heat",
+      "Very brittle and cracks easily. Not good for structural purposes"
+    ],
+    "why": "Answer: PMMA (Acrylic/perspex) (Polymers - Thermoforming)"
+  },
+  {
+    "question_id": 7,
+    "kind": "multi",
+    "image": "images/teak_1.png",
+    "question": "Which statements apply to this material? (Select ALL that apply)",
+    "correct_answers": [
+      "Expensive",
+      "Natural oils protect from insect and fungal attack outdoors. Strong, dense, hard."
+    ],
+    "why": "Answer: Teak (Natural Timbers)"
+  },
+  {
+    "question_id": 8,
+    "kind": "mcq",
+    "image": "images/pmma_acrylic_perspex_2.png",
+    "question": "What material is shown?",
+    "correct_answers": [
+      "PMMA (Acrylic/perspex)"
+    ],
+    "why": "Polymers - Thermoforming • Brilliant optical properties (nearly 100% transparent). Rigid and hard. Easly formed with heat"
+  },
+  {
+    "question_id": 9,
+    "kind": "multi",
+    "image": "images/steel_1.png",
+    "question": "Which statements apply to this material? (Select ALL that apply)",
+    "correct_answers": [
+      "Can rust when exposed to air/water. Needs painting or other protection from elements. Heavy compared to Aluminium",
+      "Structures that require strength first - bridges, cars, bicycle frames, tools, machinery."
+    ],
+    "why": "Answer: Steel (Metals / Alloys)"
+  },
+  {
+    "question_id": 10,
+    "kind": "multi",
+    "image": "images/abs_1.png",
+    "question": "Which statements apply to this material? (Select ALL that apply)",
+    "correct_answers": [
+      "Good balance of strength, hardness, bending resistance, fatique resistance a good 'does it all' plastic. Recyclable (technically)",
+      "Difficult to 3D print with (which is why we use PLA at school)"
+    ],
+    "why": "Answer: ABS (Polymers - Thermoforming)"
+  },
+  {
+    "question_id": 11,
+    "kind": "multi",
+    "image": "images/urea_formaldehyde_1.png",
+    "question": "Which statements apply to this material? (Select ALL that apply)",
+    "correct_answers": [
+      "Thermosetting, so not recyclable - hard to mould",
+      "Saucepan handles. Plug sockets"
+    ],
+    "why": "Answer: Urea Formaldehyde (Polymers - Thermosetting)"
+  },
+  {
+    "question_id": 12,
+    "kind": "mcq",
+    "image": "images/copper_1.png",
+    "question": "What material is shown?",
+    "correct_answers": [
+      "Copper"
+    ],
+    "why": "Metals / Alloys • Great conductor of heat and electricity. Very ductile/malleable for bendy application)"
+  },
+  {
+    "question_id": 13,
+    "kind": "multi",
+    "image": "images/grp_glass_reinforced_plastic_1.png",
+    "question": "Which statements apply to this material? (Select ALL that apply)",
+    "correct_answers": [
+      "Boats hulls, fair ground rides, mould making, any custom",
+      "Costly manufacturing as very labour intensive. Less expensive than Carbon fibre. Not recyclable"
+    ],
+    "why": "Answer: GRP (glass reinforced plastic) (Composites)"
+  },
+  {
+    "question_id": 14,
+    "kind": "mcq",
+    "image": "images/carbonfibre_2.png",
+    "question": "What material is shown?",
+    "correct_answers": [
+      "Carbonfibre"
+    ],
+    "why": "Composites • Incredible strength to weight ratio allowing very lightweight and strong parts - Can be moulded into a range of complex 3D shapes and forms"
+  },
+  {
+    "question_id": 15,
+    "kind": "multi",
+    "image": "images/polypropylene_1.png",
+    "question": "Which statements apply to this material? (Select ALL that apply)",
+    "correct_answers": [
+      "Excellent fatigue resistance (bending back and forth) - Chemically resistant and easy to clean (not much sticks to it)",
+      "Difficult to glue to other materials as resists adhesives so well - Can only be bolted/riveted on."
+    ],
+    "why": "Answer: Polypropylene (Polymers - Thermoforming)"
+  },
+  {
+    "question_id": 16,
+    "kind": "mcq",
+    "image": "images/tpu_1.png",
+    "question": "What material is shown?",
+    "correct_answers": [
+      "TPU"
+    ],
+    "why": "Polymers - Thermoforming • Highly flexible and elastic - Stretchy and deformable"
+  },
+  {
+    "question_id": 17,
+    "kind": "mcq",
+    "image": "images/pine_1.png",
+    "question": "What material is shown?",
+    "correct_answers": [
+      "Pine"
+    ],
+    "why": "Natural Timbers • Strong and lightweight for a timber - Easier to move. Easy to cut, join and work with. Takes a stain and can be coloured. Cheaper than oak where cost is important but gives effect of natural wood."
+  },
+  {
+    "question_id": 18,
+    "kind": "multi",
+    "image": "images/aluminium_1.png",
+    "question": "Which statements apply to this material? (Select ALL that apply)",
+    "correct_answers": [
+      "Lightweight for it's strength, though not as strong as steel. Not as able to bend and deform as steel, tends to crack rather than flex.",
+      "Lightweight - Corrosion resistant outdoors, High tensile strength for it's weight. Easily extruded into tubes / rods"
+    ],
+    "why": "Answer: Aluminium (Metals / Alloys)"
+  },
+  {
+    "question_id": 19,
+    "kind": "mcq",
+    "image": "images/melamime_formaldehyde_1.png",
+    "question": "What material is shown?",
+    "correct_answers": [
+      "Melamime Formaldehyde"
+    ],
+    "why": "Polymers - Thermosetting • Very hard and scratch resistant. Chemically resistant"
+  },
+  {
+    "question_id": 20,
+    "kind": "mcq",
+    "image": "images/oak_1.png",
+    "question": "What material is shown?",
+    "correct_answers": [
+      "Oak"
+    ],
+    "why": "Natural Timbers • Very strong, dense, long lasting, hard and resistant to scratches and dents. Better outdoors than pine"
+  },
+  {
+    "question_id": 21,
+    "kind": "multi",
+    "image": "images/plywood_1.png",
+    "question": "Which statements apply to this material? (Select ALL that apply)",
+    "correct_answers": [
+      "Uniform strength in all directions due to alternating grains",
+      "Not as cosmetically pretty as natural timber, as 'layers' can be seen on the edges"
+    ],
+    "why": "Answer: Plywood (Man Made timbers:)"
+  },
+  {
+    "question_id": 22,
+    "kind": "mcq",
+    "image": "images/aluminium_2.png",
+    "question": "What material is shown?",
+    "correct_answers": [
+      "Aluminium"
+    ],
+    "why": "Metals / Alloys • Lightweight - Corrosion resistant outdoors, High tensile strength for it's weight. Easily extruded into tubes / rods"
+  },
+  {
+    "question_id": 23,
+    "kind": "mcq",
+    "image": "images/polypropylene_1.png",
+    "question": "What material is shown?",
+    "correct_answers": [
+      "Polypropylene"
+    ],
+    "why": "Polymers - Thermoforming • Excellent fatigue resistance (bending back and forth) - Chemically resistant and easy to clean (not much sticks to it)"
+  },
+  {
+    "question_id": 24,
+    "kind": "mcq",
+    "image": "images/stainless_steel_1.png",
+    "question": "What material is shown?",
+    "correct_answers": [
+      "Stainless Steel"
+    ],
+    "why": "Metals / Alloys • Does not corrode in even the harshest environments. Hard and scratch resistant. Antimicrobial, doesn’t rust and easy to clean."
+  },
+  {
+    "question_id": 25,
+    "kind": "mcq",
+    "image": "images/plywood_1.png",
+    "question": "What material is shown?",
+    "correct_answers": [
+      "Plywood"
+    ],
+    "why": "Man Made timbers: • Uniform strength in all directions due to alternating grains"
+  },
+  {
+    "question_id": 26,
+    "kind": "multi",
+    "image": "images/tpu_2.png",
+    "question": "Which statements apply to this material? (Select ALL that apply)",
+    "correct_answers": [
+      "Not good for structural parts",
+      "Great for grips, flexible parts like tyres, living hinges"
+    ],
+    "why": "Answer: TPU (Polymers - Thermoforming)"
+  },
+  {
+    "question_id": 27,
+    "kind": "multi",
+    "image": "images/oak_1.png",
+    "question": "Which statements apply to this material? (Select ALL that apply)",
+    "correct_answers": [
+      "Very strong, dense, long lasting, hard and resistant to scratches and dents. Better outdoors than pine",
+      "Better outdoors than pine, (railway sleepers etc) but still needs protecting. Very expensive as slower growing and rarer than pine."
+    ],
+    "why": "Answer: Oak (Natural Timbers)"
+  },
+  {
+    "question_id": 28,
+    "kind": "multi",
+    "image": "images/stainless_steel_1.png",
+    "question": "Which statements apply to this material? (Select ALL that apply)",
+    "correct_answers": [
+      "Does not corrode in even the harshest environments. Hard and scratch resistant. Antimicrobial, doesn’t rust and easy to clean.",
+      "Kitchenware, kitchen work tops, fittings on boats or for metal parts constantly exposed to outdoor weather."
+    ],
+    "why": "Answer: Stainless Steel (Metals / Alloys)"
+  },
+  {
+    "question_id": 29,
+    "kind": "mcq",
+    "image": "images/steel_1.png",
+    "question": "What material is shown?",
+    "correct_answers": [
+      "Steel"
+    ],
+    "why": "Metals / Alloys • High tensile strength. Hi compression and bending strength - Readily available. Easy to weld, join. Harder and more scratch resistant than aluminium"
+  },
+  {
+    "question_id": 30,
+    "kind": "mcq",
+    "image": "images/mdf_and_or_chip_board_1.png",
+    "question": "What material is shown?",
+    "correct_answers": [
+      "MDF and / or Chip board"
+    ],
+    "why": "Man Made timbers: • Very cheap as made from wood dust(scraps) and glue, dimensionally accurate"
+  },
+  {
+    "question_id": 31,
+    "kind": "mcq",
+    "image": "images/epoxy_resin_2.png",
+    "question": "What material is shown?",
+    "correct_answers": [
+      "Epoxy resin"
+    ],
+    "why": "Polymers - Thermosetting • Very strong bond. Used as adhesives. Sets with high transparancey. Often used with carbon fibre to make a composite."
+  },
+  {
+    "question_id": 32,
+    "kind": "multi",
+    "image": "images/pine_1.png",
+    "question": "Which statements apply to this material? (Select ALL that apply)",
+    "correct_answers": [
+      "Terrible outdoors - Will soon rot away without suitable protection -",
+      "Strong and lightweight for a timber - Easier to move. Easy to cut, join and work with. Takes a stain and can be coloured. Cheaper than oak where cost is important but gives effect of natural wood."
+    ],
+    "why": "Answer: Pine (Natural Timbers)"
+  },
+  {
+    "question_id": 33,
+    "kind": "multi",
+    "image": "images/carbonfibre_2.png",
+    "question": "Which statements apply to this material? (Select ALL that apply)",
+    "correct_answers": [
+      "Sportscar bodys, advanced sports equipment (rackets, clubs) aircraft parts, top end bicycle frames",
+      "Incredible strength to weight ratio allowing very lightweight and strong parts - Can be moulded into a range of complex 3D shapes and forms"
+    ],
+    "why": "Answer: Carbonfibre (Composites)"
+  },
+  {
+    "question_id": 34,
+    "kind": "multi",
+    "image": "images/brass_1.png",
+    "question": "Which statements apply to this material? (Select ALL that apply)",
+    "correct_answers": [
+      "Handles & knobs, bushes and bearings. Taps and plumbing fittings. Decorative (statues, busts)",
+      "An alloy of copper and Zinc - Great for decorative pieces. Self lubricating and low friction. Anti microbial."
+    ],
+    "why": "Answer: Brass (Metals / Alloys)"
+  },
+  {
+    "question_id": 35,
+    "kind": "mcq",
+    "image": "images/brass_1.png",
+    "question": "What material is shown?",
+    "correct_answers": [
+      "Brass"
+    ],
+    "why": "Metals / Alloys • An alloy of copper and Zinc - Great for decorative pieces. Self lubricating and low friction. Anti microbial."
+  },
+  {
+    "question_id": 36,
+    "kind": "multi",
+    "image": "images/mdf_and_or_chip_board_1.png",
+    "question": "Which statements apply to this material? (Select ALL that apply)",
+    "correct_answers": [
+      "Cheap furniture panels - Often covered with a veneer layer of plastic or real wood to make it seem more expensive.",
+      "Not as cosmetically pretty as natural timber. Also has poor strength as no grain. Easily soaks up water and rots/deforms. Only for indoor use."
+    ],
+    "why": "Answer: MDF and / or Chip board (Man Made timbers:)"
+  },
+  {
+    "question_id": 37,
+    "kind": "mcq",
+    "image": "images/abs_1.png",
+    "question": "What material is shown?",
+    "correct_answers": [
+      "ABS"
+    ],
+    "why": "Polymers - Thermoforming • Good balance of strength, hardness, bending resistance, fatique resistance a good 'does it all' plastic. Recyclable (technically)"
+  },
+  {
+    "question_id": 38,
+    "kind": "multi",
+    "image": "images/epoxy_resin_1.png",
+    "question": "Which statements apply to this material? (Select ALL that apply)",
+    "correct_answers": [
+      "Very strong bond. Used as adhesives. Sets with high transparancey. Often used with carbon fibre to make a composite.",
+      "Not recyclable. Brittle and not flexible."
+    ],
+    "why": "Answer: Epoxy resin (Polymers - Thermosetting)"
+  }
+]

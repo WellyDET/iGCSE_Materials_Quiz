@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>iGCSE General Materials Knowledge quiz</title>
+<style>
+  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; background: #f6f7fb; color: #111; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 18px; }
+  .card { background: #fff; border-radius: 14px; box-shadow: 0 8px 24px rgba(0,0,0,.08); padding: 16px; margin: 14px 0; }
+  h1 { font-size: 20px; margin: 0 0 6px; }
+  .muted { color:#555; font-size: 13px; line-height:1.4; }
+  .topbar { display:flex; gap:12px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; }
+  button { border: 0; border-radius: 10px; padding: 10px 12px; background: #111; color: #fff; cursor:pointer; }
+  button.secondary { background: #e9ebf3; color:#111; }
+  button:disabled { opacity:.55; cursor:not-allowed; }
+  .qhead { display:flex; align-items:flex-start; justify-content:space-between; gap:10px; }
+  .qnum { font-weight: 750; }
+  .pill { font-size: 12px; padding: 4px 8px; border-radius: 999px; background: #eef1ff; color:#2b3a89; white-space:nowrap; }
+  .prompt { display:flex; gap:14px; align-items:flex-start; flex-wrap:wrap; margin-top: 10px; }
+  .prompt img { max-width: 360px; width: 100%; border-radius: 12px; border: 1px solid #e6e7ef; background:#fff; }
+  .stem { font-size: 15px; margin: 8px 0 10px; }
+  .opts { display:grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  @media (max-width: 720px) { .opts { grid-template-columns: 1fr; } }
+  label.opt { display:flex; gap: 10px; align-items:flex-start; padding: 10px; border: 1px solid #e6e7ef; border-radius: 12px; cursor:pointer; user-select:none; }
+  label.opt.correct { border-color: #2b8a3e; background: #eefaf1; }
+  label.opt.wrong { border-color: #c92a2a; background: #fff1f1; }
+  .actions { display:flex; gap:10px; flex-wrap:wrap; margin-top: 12px; }
+  .feedback { margin-top: 10px; font-size: 14px; }
+  .feedback.good { color:#2b8a3e; font-weight: 650; }
+  .feedback.bad { color:#c92a2a; font-weight: 650; }
+  details summary { cursor:pointer; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="topbar">
+        <div>
+          <h1 id="title"></h1>
+          <div class="muted" id="subtitle"></div>
+          <div class="muted" style="margin-top:6px;">
+            ✅ Every question is built from a <b>single</b> material row: image(s) + facts stay together.
+          </div>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="secondary" id="btnNew">New shuffled quiz</button>
+          <button class="secondary" id="btnReveal">Reveal answers (teacher)</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="quiz"></div>
+  </div>
+
+<script>
+const RAW = {"title": "iGCSE General Materials Knowledge quiz", "subtitle": "38 questions • 1 ID + 1 statements question per material • options shuffle each load • immediate feedback", "questions": [{"kind": "mcq", "img": "images/grp_glass_reinforced_plastic_3.png", "q": "What material is shown?", "opts": ["Carbonfibre", "Urea Formaldehyde", "Plywood", "GRP (glass reinforced plastic)"], "correct": [3], "why": "Composites • Incredible strength (not lightweight though) Can be moulded into a range of complex 3D shapes and forms"}, {"kind": "multi", "img": "images/copper_1.png", "q": "Which statements apply to this material? (Select ALL that apply)", "opts": ["good for wiring, plumbing, circuit board conductors", "An alloy of copper and Zinc - Great for decorative pieces. Self lubricating and low friction. Anti microbial.", "Expensive", "Sportscar bodys, advanced sports equipment (rackets, clubs) aircraft parts, top end bicycle frames", "Very brittle and cracks easily. Not good for structural purposes", "Great conductor of heat and electricity. Very ductile/malleable for bendy application)"], "correct": [0, 5], "why": "Answer: Copper (Metals / Alloys)"}, {"kind": "mcq", "img": "images/urea_formaldehyde_1.png", "q": "What material is shown?", "opts": ["Urea Formaldehyde", "Oak", "Steel", "GRP (glass reinforced plastic)"], "correct": [0], "why": "Polymers - Thermosetting • Very heat and electricity resistant - Handles extreme temeperatures"}, {"kind": "mcq", "img": "images/teak_1.png", "q": "What material is shown?", "opts": ["Teak", "Melamime Formaldehyde", "Oak", "Epoxy resin"], "correct": [0], "why": "Natural Timbers • Natural oils protect from insect and fungal attack outdoors. Strong, dense, hard."}, {"kind": "multi", "img": "images/melamime_formaldehyde_1.png", "q": "Which statements apply to this material? (Select ALL that apply)", "opts": ["As an adhesive/glue.", "Thermosetting, so not recyclable.", "Kitchen work tops", "Difficult to glue to other materials as resists adhesives so well - Can only be bolted/riveted on.", "Most injection moulded parts, casings, houses, brackets, small parts (Lego is ABS) - Basically, most common products are probably ABS.", "Lens, car head lights, tail lights, signs and shop displays / advertising"], "correct": [1, 2], "why": "Answer: Melamime Formaldehyde (Polymers - Thermosetting)"}, {"kind": "multi", "img": "images/pmma_acrylic_perspex_2.png", "q": "Which statements apply to this material? (Select ALL that apply)", "opts": ["Brilliant optical properties (nearly 100% transparent). Rigid and hard. Easly formed with heat", "Not as cosmetically pretty as natural timber. Also has poor strength as no grain. Easily soaks up water and rots/deforms. Only for indoor use.", "An alloy of copper and Zinc - Great for decorative pieces. Self lubricating and low friction. Anti microbial.", "Not recyclable. Brittle and not flexible.", "Kitchen work tops", "Very brittle and cracks easily. Not good for structural purposes"], "correct": [0, 5], "why": "Answer: PMMA (Acrylic/perspex) (Polymers - Thermoforming)"}, {"kind": "multi", "img": "images/teak_1.png", "q": "Which statements apply to this material? (Select ALL that apply)", "opts": ["Structures that require strength first - bridges, cars, bicycle frames, tools, machinery.", "Expensive", "good for wiring, plumbing, circuit board conductors", "Brilliant optical properties (nearly 100% transparent). Rigid and hard. Easly formed with heat", "Natural oils protect from insect and fungal attack outdoors. Strong, dense, hard.", "Highly flexible and elastic - Stretchy and deformable"], "correct": [1, 4], "why": "Answer: Teak (Natural Timbers)"}, {"kind": "mcq", "img": "images/pmma_acrylic_perspex_2.png", "q": "What material is shown?", "opts": ["Aluminium", "Pine", "Brass", "PMMA (Acrylic/perspex)"], "correct": [3], "why": "Polymers - Thermoforming • Brilliant optical properties (nearly 100% transparent). Rigid and hard. Easly formed with heat"}, {"kind": "multi", "img": "images/steel_1.png", "q": "Which statements apply to this material? (Select ALL that apply)", "opts": ["Not good for structural parts", "Uniform strength in all directions due to alternating grains", "Can rust when exposed to air/water. Needs painting or other protection from elements. Heavy compared to Aluminium", "Lens, car head lights, tail lights, signs and shop displays / advertising", "Most injection moulded parts, casings, houses, brackets, small parts (Lego is ABS) - Basically, most common products are probably ABS.", "Structures that require strength first - bridges, cars, bicycle frames, tools, machinery."], "correct": [2, 5], "why": "Answer: Steel (Metals / Alloys)"}, {"kind": "multi", "img": "images/abs_1.png", "q": "Which statements apply to this material? (Select ALL that apply)", "opts": ["Cheap furniture panels - Often covered with a veneer layer of plastic or real wood to make it seem more expensive.", "Good balance of strength, hardness, bending resistance, fatique resistance a good 'does it all' plastic. Recyclable (technically)", "Saucepan handles. Plug sockets", "Not as cosmetically pretty as natural timber. Also has poor strength as no grain. Easily soaks up water and rots/deforms. Only for indoor use.", "good for wiring, plumbing, circuit board conductors", "Difficult to 3D print with (which is why we use PLA at school)"], "correct": [1, 5], "why": "Answer: ABS (Polymers - Thermoforming)"}, {"kind": "multi", "img": "images/urea_formaldehyde_1.png", "q": "Which statements apply to this material? (Select ALL that apply)", "opts": ["Sportscar bodys, advanced sports equipment (rackets, clubs) aircraft parts, top end bicycle frames", "Lightweight for it's strength, though not as strong as steel. Not as able to bend and deform as steel, tends to crack rather than flex.", "Does not corrode in even the harshest environments. Hard and scratch resistant. Antimicrobial, doesn’t rust and easy to clean.", "Thermosetting, so not recyclable - hard to mould", "Structural panels for furniture where strength is key. Used for boarding up doors/windows or making structures out of wood where cosmetics are no important (building work)", "Saucepan handles. Plug sockets"], "correct": [3, 5], "why": "Answer: Urea Formaldehyde (Polymers - Thermosetting)"}, {"kind": "mcq", "img": "images/copper_1.png", "q": "What material is shown?", "opts": ["Copper", "Teak", "Epoxy resin", "Brass"], "correct": [0], "why": "Metals / Alloys • Great conductor of heat and electricity. Very ductile/malleable for bendy application)"}, {"kind": "multi", "img": "images/grp_glass_reinforced_plastic_1.png", "q": "Which statements apply to this material? (Select ALL that apply)", "opts": ["Good balance of strength, hardness, bending resistance, fatique resistance a good 'does it all' plastic. Recyclable (technically)", "Boats hulls, fair ground rides, mould making, any custom", "good for wiring, plumbing, circuit board conductors", "Expensive", "Costly manufacturing as very labour intensive. Less expensive than Carbon fibre. Not recyclable", "Does not corrode in even the harshest environments. Hard and scratch resistant. Antimicrobial, doesn’t rust and easy to clean."], "correct": [1, 4], "why": "Answer: GRP (glass reinforced plastic) (Composites)"}, {"kind": "mcq", "img": "images/carbonfibre_2.png", "q": "What material is shown?", "opts": ["Copper", "Carbonfibre", "Brass", "Polypropylene"], "correct": [1], "why": "Composites • Incredible strength to weight ratio allowing very lightweight and strong parts - Can be moulded into a range of complex 3D shapes and forms"}, {"kind": "multi", "img": "images/polypropylene_1.png", "q": "Which statements apply to this material? (Select ALL that apply)", "opts": ["Excellent fatigue resistance (bending back and forth) - Chemically resistant and easy to clean (not much sticks to it)", "Difficult to glue to other materials as resists adhesives so well - Can only be bolted/riveted on.", "Most injection moulded parts, casings, houses, brackets, small parts (Lego is ABS) - Basically, most common products are probably ABS.", "Lightweight - Corrosion resistant outdoors, High tensile strength for it's weight. Easily extruded into tubes / rods", "Very brittle and cracks easily. Not good for structural purposes", "Not recyclable. Brittle and not flexible."], "correct": [0, 1], "why": "Answer: Polypropylene (Polymers - Thermoforming)"}, {"kind": "mcq", "img": "images/tpu_1.png", "q": "What material is shown?", "opts": ["Copper", "TPU", "GRP (glass reinforced plastic)", "Brass"], "correct": [1], "why": "Polymers - Thermoforming • Highly flexible and elastic - Stretchy and deformable"}, {"kind": "mcq", "img": "images/pine_1.png", "q": "What material is shown?", "opts": ["Pine", "Oak", "MDF and / or Chip board", "GRP (glass reinforced plastic)"], "correct": [0], "why": "Natural Timbers • Strong and lightweight for a timber - Easier to move. Easy to cut, join and work with. Takes a stain and can be coloured. Cheaper than oak where cost is important but gives effect of natural wood."}, {"kind": "multi", "img": "images/aluminium_1.png", "q": "Which statements apply to this material? (Select ALL that apply)", "opts": ["Terrible outdoors - Will soon rot away without suitable protection -", "good for wiring, plumbing, circuit board conductors", "Lightweight for it's strength, though not as strong as steel. Not as able to bend and deform as steel, tends to crack rather than flex.", "Does not corrode in even the harshest environments. Hard and scratch resistant. Antimicrobial, doesn’t rust and easy to clean.", "Lightweight - Corrosion resistant outdoors, High tensile strength for it's weight. Easily extruded into tubes / rods", "Great for grips, flexible parts like tyres, living hinges"], "correct": [2, 4], "why": "Answer: Aluminium (Metals / Alloys)"}, {"kind": "mcq", "img": "images/melamime_formaldehyde_1.png", "q": "What material is shown?", "opts": ["Oak", "Brass", "Plywood", "Melamime Formaldehyde"], "correct": [3], "why": "Polymers - Thermosetting • Very hard and scratch resistant. Chemically resistant"}, {"kind": "mcq", "img": "images/oak_1.png", "q": "What material is shown?", "opts": ["Oak", "Epoxy resin", "ABS", "Urea Formaldehyde"], "correct": [0], "why": "Natural Timbers • Very strong, dense, long lasting, hard and resistant to scratches and dents. Better outdoors than pine"}, {"kind": "multi", "img": "images/plywood_1.png", "q": "Which statements apply to this material? (Select ALL that apply)", "opts": ["Expensive, hard to work with, cut, fold, machine or join together", "An alloy of copper and Zinc - Great for decorative pieces. Self lubricating and low friction. Anti microbial.", "Uniform strength in all directions due to alternating grains", "Most injection moulded parts, casings, houses, brackets, small parts (Lego is ABS) - Basically, most common products are probably ABS.", "Not as cosmetically pretty as natural timber, as 'layers' can be seen on the edges", "Frames / structures - e.g. for bicycles, cars, aircraft. Ladders/poles - anything where strength with lightweight is useful"], "correct": [2, 4], "why": "Answer: Plywood (Man Made timbers:)"}, {"kind": "mcq", "img": "images/aluminium_2.png", "q": "What material is shown?", "opts": ["Carbonfibre", "Aluminium", "GRP (glass reinforced plastic)", "Melamime Formaldehyde"], "correct": [1], "why": "Metals / Alloys • Lightweight - Corrosion resistant outdoors, High tensile strength for it's weight. Easily extruded into tubes / rods"}, {"kind": "mcq", "img": "images/polypropylene_1.png", "q": "What material is shown?", "opts": ["Polypropylene", "ABS", "TPU", "Stainless Steel"], "correct": [0], "why": "Polymers - Thermoforming • Excellent fatigue resistance (bending back and forth) - Chemically resistant and easy to clean (not much sticks to it)"}, {"kind": "mcq", "img": "images/stainless_steel_1.png", "q": "What material is shown?", "opts": ["Brass", "Oak", "Stainless Steel", "Plywood"], "correct": [2], "why": "Metals / Alloys • Does not corrode in even the harshest environments. Hard and scratch resistant. Antimicrobial, doesn’t rust and easy to clean."}, {"kind": "mcq", "img": "images/plywood_1.png", "q": "What material is shown?", "opts": ["Aluminium", "Plywood", "Pine", "Teak"], "correct": [1], "why": "Man Made timbers: • Uniform strength in all directions due to alternating grains"}, {"kind": "multi", "img": "images/tpu_2.png", "q": "Which statements apply to this material? (Select ALL that apply)", "opts": ["Expensive", "Good balance of strength, hardness, bending resistance, fatique resistance a good 'does it all' plastic. Recyclable (technically)", "Not good for structural parts", "Great for grips, flexible parts like tyres, living hinges", "Structures that require strength first - bridges, cars, bicycle frames, tools, machinery.", "Living hinges, plastic wallets and folders, chopping boards, low friction parts (plastic screw threads)"], "correct": [2, 3], "why": "Answer: TPU (Polymers - Thermoforming)"}, {"kind": "multi", "img": "images/oak_1.png", "q": "Which statements apply to this material? (Select ALL that apply)", "opts": ["Very hard and scratch resistant. Chemically resistant", "Very strong, dense, long lasting, hard and resistant to scratches and dents. Better outdoors than pine", "Can rust when exposed to air/water. Needs painting or other protection from elements. Heavy compared to Aluminium", "Not recyclable. Brittle and not flexible.", "Better outdoors than pine, (railway sleepers etc) but still needs protecting. Very expensive as slower growing and rarer than pine.", "Brilliant optical properties (nearly 100% transparent). Rigid and hard. Easly formed with heat"], "correct": [1, 4], "why": "Answer: Oak (Natural Timbers)"}, {"kind": "multi", "img": "images/stainless_steel_1.png", "q": "Which statements apply to this material? (Select ALL that apply)", "opts": ["Most injection moulded parts, casings, houses, brackets, small parts (Lego is ABS) - Basically, most common products are probably ABS.", "Saucepan handles. Plug sockets", "Does not corrode in even the harshest environments. Hard and scratch resistant. Antimicrobial, doesn’t rust and easy to clean.", "Uniform strength in all directions due to alternating grains", "Highly flexible and elastic - Stretchy and deformable", "Kitchenware, kitchen work tops, fittings on boats or for metal parts constantly exposed to outdoor weather."], "correct": [2, 5], "why": "Answer: Stainless Steel (Metals / Alloys)"}, {"kind": "mcq", "img": "images/steel_1.png", "q": "What material is shown?", "opts": ["Brass", "Copper", "Steel", "Carbonfibre"], "correct": [2], "why": "Metals / Alloys • High tensile strength. Hi compression and bending strength - Readily available. Easy to weld, join. Harder and more scratch resistant than aluminium"}, {"kind": "mcq", "img": "images/mdf_and_or_chip_board_1.png", "q": "What material is shown?", "opts": ["Pine", "MDF and / or Chip board", "Copper", "GRP (glass reinforced plastic)"], "correct": [1], "why": "Man Made timbers: • Very cheap as made from wood dust(scraps) and glue, dimensionally accurate"}, {"kind": "mcq", "img": "images/epoxy_resin_2.png", "q": "What material is shown?", "opts": ["Epoxy resin", "ABS", "Pine", "TPU"], "correct": [0], "why": "Polymers - Thermosetting • Very strong bond. Used as adhesives. Sets with high transparancey. Often used with carbon fibre to make a composite."}, {"kind": "multi", "img": "images/pine_1.png", "q": "Which statements apply to this material? (Select ALL that apply)", "opts": ["Terrible outdoors - Will soon rot away without suitable protection -", "High tensile strength. Hi compression and bending strength - Readily available. Easy to weld, join. Harder and more scratch resistant than aluminium", "Frames / structures - e.g. for bicycles, cars, aircraft. Ladders/poles - anything where strength with lightweight is useful", "Strong and lightweight for a timber - Easier to move. Easy to cut, join and work with. Takes a stain and can be coloured. Cheaper than oak where cost is important but gives effect of natural wood.", "Good balance of strength, hardness, bending resistance, fatique resistance a good 'does it all' plastic. Recyclable (technically)", "Great conductor of heat and electricity. Very ductile/malleable for bendy application)"], "correct": [0, 3], "why": "Answer: Pine (Natural Timbers)"}, {"kind": "multi", "img": "images/carbonfibre_2.png", "q": "Which statements apply to this material? (Select ALL that apply)", "opts": ["Thermosetting, so not recyclable.", "Thermosetting, so not recyclable - hard to mould", "Difficult to 3D print with (which is why we use PLA at school)", "Living hinges, plastic wallets and folders, chopping boards, low friction parts (plastic screw threads)", "Sportscar bodys, advanced sports equipment (rackets, clubs) aircraft parts, top end bicycle frames", "Incredible strength to weight ratio allowing very lightweight and strong parts - Can be moulded into a range of complex 3D shapes and forms"], "correct": [4, 5], "why": "Answer: Carbonfibre (Composites)"}, {"kind": "multi", "img": "images/brass_1.png", "q": "Which statements apply to this material? (Select ALL that apply)", "opts": ["Kitchen work tops", "Handles & knobs, bushes and bearings. Taps and plumbing fittings. Decorative (statues, busts)", "Very strong, dense, long lasting, hard and resistant to scratches and dents. Better outdoors than pine", "Cheap furniture panels - Often covered with a veneer layer of plastic or real wood to make it seem more expensive.", "Sportscar bodys, advanced sports equipment (rackets, clubs) aircraft parts, top end bicycle frames", "An alloy of copper and Zinc - Great for decorative pieces. Self lubricating and low friction. Anti microbial."], "correct": [1, 5], "why": "Answer: Brass (Metals / Alloys)"}, {"kind": "mcq", "img": "images/brass_1.png", "q": "What material is shown?", "opts": ["Pine", "Steel", "GRP (glass reinforced plastic)", "Brass"], "correct": [3], "why": "Metals / Alloys • An alloy of copper and Zinc - Great for decorative pieces. Self lubricating and low friction. Anti microbial."}, {"kind": "multi", "img": "images/mdf_and_or_chip_board_1.png", "q": "Which statements apply to this material? (Select ALL that apply)", "opts": ["Difficult to glue to other materials as resists adhesives so well - Can only be bolted/riveted on.", "Cheap furniture panels - Often covered with a veneer layer of plastic or real wood to make it seem more expensive.", "good for wiring, plumbing, circuit board conductors", "Very brittle and cracks easily. Not good for structural purposes", "Lens, car head lights, tail lights, signs and shop displays / advertising", "Not as cosmetically pretty as natural timber. Also has poor strength as no grain. Easily soaks up water and rots/deforms. Only for indoor use."], "correct": [1, 5], "why": "Answer: MDF and / or Chip board (Man Made timbers:)"}, {"kind": "mcq", "img": "images/abs_1.png", "q": "What material is shown?", "opts": ["Urea Formaldehyde", "ABS", "Aluminium", "TPU"], "correct": [1], "why": "Polymers - Thermoforming • Good balance of strength, hardness, bending resistance, fatique resistance a good 'does it all' plastic. Recyclable (technically)"}, {"kind": "multi", "img": "images/epoxy_resin_1.png", "q": "Which statements apply to this material? (Select ALL that apply)", "opts": ["Kitchenware, kitchen work tops, fittings on boats or for metal parts constantly exposed to outdoor weather.", "Very strong bond. Used as adhesives. Sets with high transparancey. Often used with carbon fibre to make a composite.", "Cheap furniture panels - Often covered with a veneer layer of plastic or real wood to make it seem more expensive.", "Great for grips, flexible parts like tyres, living hinges", "Expensive, hard to work with, cut, fold, machine or join together", "Not recyclable. Brittle and not flexible."], "correct": [1, 5], "why": "Answer: Epoxy resin (Polymers - Thermosetting)"}]};
+
+document.getElementById("title").textContent = RAW.title;
+document.getElementById("subtitle").textContent = RAW.subtitle;
+
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function buildQuiz() {
+  const qs = shuffle(RAW.questions);
+  const quizEl = document.getElementById("quiz");
+  quizEl.innerHTML = "";
+
+  qs.forEach((q, idx) => {
+    const optObjs = q.opts.map((text, i) => ({ text, isCorrect: q.correct.includes(i) }));
+    const shuffled = shuffle(optObjs);
+
+    const card = document.createElement("div");
+    card.className = "card";
+
+    const qid = `q_${idx}`;
+    const optWrapId = `opts_${qid}`;
+
+    card.innerHTML = `
+      <div class="qhead">
+        <div class="qnum">Q${idx+1}. ${q.q}</div>
+        <div class="pill">${q.kind === "mcq" ? "ID" : "STATEMENTS"}</div>
+      </div>
+
+      <div class="prompt">
+        ${q.img ? `<img src="${q.img}" alt="Prompt image"/>` : `<div class="muted">No image provided for this row.</div>`}
+      </div>
+
+      <div class="opts" id="${optWrapId}"></div>
+
+      <div class="actions">
+        <button id="check_${qid}">Check answer</button>
+        <button class="secondary" id="reset_${qid}">Reset</button>
+      </div>
+
+      <div class="feedback" id="fb_${qid}"></div>
+
+      <details style="margin-top:10px;">
+        <summary class="muted">Why? (teacher hint)</summary>
+        <div class="muted" style="margin-top:6px;">${q.why || ""}</div>
+      </details>
+    `;
+
+    const optsEl = card.querySelector("#" + optWrapId);
+
+    shuffled.forEach((o, oi) => {
+      const optId = `${qid}_opt_${oi}`;
+      const lab = document.createElement("label");
+      lab.className = "opt";
+      lab.setAttribute("for", optId);
+      lab.innerHTML = `
+        <input type="${q.kind === "mcq" ? "radio" : "checkbox"}"
+               name="${qid}"
+               id="${optId}"
+               data-correct="${o.isCorrect ? "1" : "0"}" />
+        <div>${o.text}</div>
+      `;
+      optsEl.appendChild(lab);
+    });
+
+    const fb = card.querySelector("#fb_" + qid);
+    const btnCheck = card.querySelector("#check_" + qid);
+    const btnReset = card.querySelector("#reset_" + qid);
+
+    function reset() {
+      fb.textContent = "";
+      fb.className = "feedback";
+      card.querySelectorAll("label.opt").forEach(l => l.classList.remove("correct","wrong"));
+      card.querySelectorAll("input").forEach(inp => inp.checked = false);
+      btnCheck.disabled = false;
+    }
+
+    btnReset.addEventListener("click", reset);
+
+    btnCheck.addEventListener("click", () => {
+      const inputs = Array.from(card.querySelectorAll("input"));
+      const labels = Array.from(card.querySelectorAll("label.opt"));
+
+      let allGood = true;
+      inputs.forEach((inp, i) => {
+        const should = inp.dataset.correct === "1";
+        const chose = inp.checked;
+        if (should !== chose) allGood = false;
+      });
+
+      inputs.forEach((inp, i) => {
+        const should = inp.dataset.correct === "1";
+        const chose = inp.checked;
+        if (should) labels[i].classList.add("correct");
+        if (chose && !should) labels[i].classList.add("wrong");
+      });
+
+      if (allGood) {
+        fb.textContent = "✅ Correct!";
+        fb.className = "feedback good";
+      } else {
+        fb.textContent = "❌ Not quite — correct options are highlighted in green.";
+        fb.className = "feedback bad";
+      }
+      btnCheck.disabled = true;
+    });
+
+    quizEl.appendChild(card);
+  });
+}
+
+buildQuiz();
+
+document.getElementById("btnNew").addEventListener("click", () => buildQuiz());
+
+document.getElementById("btnReveal").addEventListener("click", () => {
+  const ok = confirm("Teacher mode: reveal correct answers on all questions?");
+  if (!ok) return;
+  document.querySelectorAll("input[data-correct='1']").forEach(inp => { inp.checked = true; });
+});
+</script>
+</body>
+</html>
